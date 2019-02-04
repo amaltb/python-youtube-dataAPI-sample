@@ -1,0 +1,143 @@
+2019-02-04 12:26:47,568 - log - INFO - message
+2019-02-04 12:31:55,607 - log - INFO - Execution starts...
+2019-02-04 12:31:55,607 - log - INFO - Authenticating service: youtube
+2019-02-04 12:32:16,851 - log - INFO - Attempting to create playlist : Test Playlist
+2019-02-04 15:13:34,955 - log - INFO - Execution starts...
+2019-02-04 15:13:39,105 - log - INFO - Authorization service: youtube
+2019-02-04 15:14:57,189 - log - INFO - Attempting to create playlist : ML-WQU-Playlist if not exists...
+2019-02-04 15:15:24,216 - log - INFO - Playlist is created with ID: PLvFc4oBiEBR3DvBpfapOvDpaxoRBL4Qt-
+2019-02-04 15:17:07,112 - log - ERROR - Execution has terminated with exception...
+Traceback (most recent call last):
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python-youtube-dataAPI/src/script.py", line 51, in _extract_videos
+    video_id = line.split('/').reverse()[0]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python-youtube-dataAPI/src/script.py", line 17, in run
+    video_ids = _extract_videos(_video_urls_file)
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python-youtube-dataAPI/src/script.py", line 58, in _extract_videos
+    raise RuntimeError('Failed to extract video ids from file...' + str(e))
+RuntimeError: Failed to extract video ids from file...'NoneType' object is not subscriptable
+2019-02-04 15:30:11,840 - log - INFO - Execution starts...
+2019-02-04 15:30:11,842 - log - INFO - Authorization service: youtube
+2019-02-04 15:31:03,577 - log - INFO - Attempting to create playlist : ML-WQU-Playlist if not exists...
+2019-02-04 15:31:05,628 - log - INFO - Playlist is created with ID: PLvFc4oBiEBR24xQzRXZsb2cQSlSQKweUf
+2019-02-04 15:31:13,955 - log - INFO - Attempting to populate playlist : ML-WQU-Playlist if not exists...
+2019-02-04 15:31:50,357 - log - ERROR - Execution has terminated with exception...
+Traceback (most recent call last):
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python-youtube-dataAPI/src/script.py", line 36, in _populate_playlist
+    playlists_insert_response = youtube.playlistItem().insert(
+AttributeError: 'Resource' object has no attribute 'playlistItem'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python-youtube-dataAPI/src/script.py", line 18, in run
+    _populate_playlist(youtube, playlist, video_ids)
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python-youtube-dataAPI/src/script.py", line 41, in _populate_playlist
+    raise RuntimeError('Could not add videos to this playlist..' + str(e))
+RuntimeError: Could not add videos to this playlist..'Resource' object has no attribute 'playlistItem'
+2019-02-04 15:33:59,747 - log - INFO - Execution starts...
+2019-02-04 15:33:59,748 - log - INFO - Authorization service: youtube
+2019-02-04 15:34:31,937 - log - INFO - Attempting to create playlist : ML-WQU-Playlist if not exists...
+2019-02-04 15:34:33,908 - log - INFO - Playlist is created with ID: PLvFc4oBiEBR05kIITVpqkFmN8AAVG0uwn
+2019-02-04 15:34:33,910 - log - INFO - Attempting to populate playlist : ML-WQU-Playlist
+2019-02-04 15:34:43,298 - log - ERROR - Execution has terminated with exception...
+Traceback (most recent call last):
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python-youtube-dataAPI/src/script.py", line 38, in _populate_playlist
+    body=body
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python_virtual_environments/python-youtube-dataAPI/lib/python3.6/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python_virtual_environments/python-youtube-dataAPI/lib/python3.6/site-packages/googleapiclient/http.py", line 851, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 400 when requesting https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2Cstatus&alt=json returned "Resource type not supported.">
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python-youtube-dataAPI/src/script.py", line 18, in run
+    _populate_playlist(youtube, playlist, video_ids)
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python-youtube-dataAPI/src/script.py", line 41, in _populate_playlist
+    raise RuntimeError('Could not add videos to this playlist..' + str(e))
+RuntimeError: Could not add videos to this playlist..<HttpError 400 when requesting https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2Cstatus&alt=json returned "Resource type not supported.">
+2019-02-04 15:37:16,915 - log - INFO - Execution starts...
+2019-02-04 15:37:16,915 - log - INFO - Authorization service: youtube
+2019-02-04 15:38:10,572 - log - INFO - Attempting to create playlist : ML-WQU-Playlist if not exists...
+2019-02-04 15:38:12,532 - log - INFO - Playlist is created with ID: PLvFc4oBiEBR32aAswDER2YdanX4jceiO2
+2019-02-04 15:38:12,534 - log - INFO - Attempting to populate playlist : ML-WQU-Playlist
+2019-02-04 15:38:54,865 - log - ERROR - Execution has terminated with exception...
+Traceback (most recent call last):
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python-youtube-dataAPI/src/script.py", line 38, in _populate_playlist
+    body=body
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python_virtual_environments/python-youtube-dataAPI/lib/python3.6/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python_virtual_environments/python-youtube-dataAPI/lib/python3.6/site-packages/googleapiclient/http.py", line 851, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 400 when requesting https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2Cstatus&alt=json returned "Resource type not supported.">
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python-youtube-dataAPI/src/script.py", line 18, in run
+    _populate_playlist(youtube, playlist, video_ids)
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python-youtube-dataAPI/src/script.py", line 41, in _populate_playlist
+    raise RuntimeError('Could not add videos to this playlist..' + str(e))
+RuntimeError: Could not add videos to this playlist..<HttpError 400 when requesting https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2Cstatus&alt=json returned "Resource type not supported.">
+2019-02-04 15:40:09,112 - log - INFO - Execution starts...
+2019-02-04 15:40:09,113 - log - INFO - Authorization service: youtube
+2019-02-04 15:40:44,190 - log - INFO - Attempting to create playlist : ML-WQU-Playlist if not exists...
+2019-02-04 15:40:46,288 - log - INFO - Playlist is created with ID: PLvFc4oBiEBR25FMEuZZQVLKfhy2JPNWv3
+2019-02-04 15:40:46,290 - log - INFO - Attempting to populate playlist : ML-WQU-Playlist
+2019-02-04 15:40:56,669 - log - ERROR - Execution has terminated with exception...
+Traceback (most recent call last):
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python-youtube-dataAPI/src/script.py", line 38, in _populate_playlist
+    body=body
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python_virtual_environments/python-youtube-dataAPI/lib/python3.6/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python_virtual_environments/python-youtube-dataAPI/lib/python3.6/site-packages/googleapiclient/http.py", line 851, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 400 when requesting https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&alt=json returned "Resource type not supported.">
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python-youtube-dataAPI/src/script.py", line 18, in run
+    _populate_playlist(youtube, playlist, video_ids)
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python-youtube-dataAPI/src/script.py", line 41, in _populate_playlist
+    raise RuntimeError('Could not add videos to this playlist..' + str(e))
+RuntimeError: Could not add videos to this playlist..<HttpError 400 when requesting https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&alt=json returned "Resource type not supported.">
+2019-02-04 15:46:32,579 - log - INFO - Execution starts...
+2019-02-04 15:46:32,580 - log - INFO - Authorization service: youtube
+2019-02-04 15:47:01,458 - log - INFO - Attempting to create playlist : ML-WQU-Playlist if not exists...
+2019-02-04 15:47:03,470 - log - INFO - Playlist is created with ID: PLvFc4oBiEBR1miJjBRQAmNUXQCJawGk0g
+2019-02-04 15:47:03,472 - log - INFO - Attempting to populate playlist : ML-WQU-Playlist
+2019-02-04 15:47:11,797 - log - ERROR - Execution has terminated with exception...
+Traceback (most recent call last):
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python-youtube-dataAPI/src/script.py", line 39, in _populate_playlist
+    body=body
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python_virtual_environments/python-youtube-dataAPI/lib/python3.6/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python_virtual_environments/python-youtube-dataAPI/lib/python3.6/site-packages/googleapiclient/http.py", line 851, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 400 when requesting https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&alt=json returned "Resource type not supported.">
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python-youtube-dataAPI/src/script.py", line 18, in run
+    _populate_playlist(youtube, playlist, video_ids)
+  File "/Users/ambabu/Documents/PersonalDocuments/code-samples/python-youtube-dataAPI/src/script.py", line 42, in _populate_playlist
+    raise RuntimeError('Could not add videos to this playlist..' + str(e))
+RuntimeError: Could not add videos to this playlist..<HttpError 400 when requesting https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&alt=json returned "Resource type not supported.">
+2019-02-04 15:50:55,281 - log - INFO - Execution starts...
+2019-02-04 15:50:55,282 - log - INFO - Authorization service: youtube
+2019-02-04 15:51:23,947 - log - INFO - Attempting to create playlist : ML-WQU-Playlist if not exists...
+2019-02-04 15:51:25,961 - log - INFO - Playlist is created with ID: PLvFc4oBiEBR21IYpNmXOHpsTuh3E6YhXJ
+2019-02-04 15:51:25,963 - log - INFO - Attempting to populate playlist : ML-WQU-Playlist
+2019-02-04 16:01:00,100 - log - INFO - Execution starts...
+2019-02-04 16:01:00,100 - log - INFO - Authorization service: youtube
+2019-02-04 16:01:35,563 - log - INFO - Attempting to create playlist : ML-WQU-Playlist if not exists...
+2019-02-04 16:01:37,400 - log - INFO - Playlist is created with ID: PLvFc4oBiEBR0SkjN1FjGJpHVfx6ledq89
+2019-02-04 16:01:37,401 - log - INFO - Attempting to populate playlist : ML-WQU-Playlist
